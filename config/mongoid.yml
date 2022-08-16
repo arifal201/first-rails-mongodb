@@ -1,0 +1,9 @@
+development:
+  clients:
+    default:
+      uri: mongodb+srv://arifal:4D3OnNEeslKOueyl@atlascluster.r2ael.mongodb.net/user?retryWrites=true&w=majority
+      options:
+        server_selection_timeout: 5
+        auth_source: admin
+        user: arifal
+        password: 4D3OnNEeslKOueyl

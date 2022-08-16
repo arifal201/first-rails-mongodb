@@ -1,0 +1,9 @@
+<p>
+  <strong><%= post.title %>:</strong>
+  <%= post.body %>
+<br>
+<%= link_to 'Delete', [post],
+  method: :delete,
+  class: "button is-danger",
+  data: { confirm: 'Are you sure?' } %>
+</p>

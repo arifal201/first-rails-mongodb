@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
+
+<section class="section post">
+  <div class="container">
+    <h2 class="subtitle is-5">
+      <strong><%= @user.post.count %></strong> Comments
+    </h2>
+    <%= render @user.post %>
+    <div class="comment-form">
+      <hr />
+      <h3 class="subtitle is-3">Leave a reply</h3>
+      <%= render partial: 'posts/form', locals: { comment: @user.post.build } %>
+    </div>
+  </div>
+</section>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
